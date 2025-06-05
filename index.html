@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>دروازه ورود</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma, sans-serif;
+      background: url('https://i.imgur.com/0aNktGE.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      direction: rtl;
+    }
+    .login-box {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 30px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box" id="login-box">
+    <h2>ورود به سیستم</h2>
+    <input type="text" id="username" placeholder="نام کاربری">
+    <input type="password" id="password" placeholder="رمز ورود">
+    <button onclick="checkLogin()">ورود</button>
+    <p id="login-error" style="color:red;"></p>
+  </div>
+
+  <div class="login-box hidden" id="form-box">
+    <h3>فرم نمره‌دهی</h3>
+    <input type="text" id="student-name" placeholder="نام دانشجو">
+    <input type="text" id="student-lesson" placeholder="درس دانشجو">
+    <input type="number" id="student-grade" placeholder="نمره دانشجو">
+    <button onclick="submitGrade()">ثبت نمره</button>
+    <p id="form-error" style="color:red;"></p>
+  </div>
+
+  <div class="login-box hidden" id="done-box">
+    <h2>✅ نمره ثبت شد!</h2>
+    <p id="saved-info"></p>
+  </div>
+
+  <script>
+    const validUser = "akpa71017";
+    const validPass = "Howhalh910SP";
+
+    function checkLogin() {
+      const u = document.getElementById('username').value;
+      const p = document.getElementById('password').value;
+      if (u === validUser && p === validPass) {
+        document.getElementById('login-box').classList.add('hidden');
+        document.getElementById('form-box').classList.remove('hidden');
+      } else {
+        document.getElementById('login-error').innerText = 'نام کاربری یا رمز اشتباه است';
+      }
+    }
+
+    function submitGrade() {
+      const name = document.getElementById('student-name').value;
+      const lesson = document.getElementById('student-lesson').value;
+      const grade = document.getElementById('student-grade').value;
+
+      if (!name || !lesson || !grade) {
+        document.getElementById('form-error').innerText = 'لطفاً همه فیلدها را پر کنید';
+        return;
+      }
+
+      localStorage.setItem("student-info", JSON.stringify({ name, lesson, grade }));
+      document.getElementById('form-box').classList.add('hidden');
+      document.getElementById('done-box').classList.remove('hidden');
+
+      document.getElementById('saved-info').innerText = `نام: ${name} | درس: ${lesson} | نمره: ${grade}`;
+    }
+  </script>
+</body>
+</html>
