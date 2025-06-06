@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VI RP - معرفی بازی Los Angeles Crimes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    direction: rtl;
+    color: #eee;
+    background: url('https://s6.uupload.ir/files/img_20250606_040050_523_p3c2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 0;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 50px auto 80px auto;
+    background: rgba(34, 34, 34, 0.9);
+    border-radius: 18px;
+    padding: 35px 45px;
+    box-shadow: 0 0 35px #f39c12;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .container:hover {
+    box-shadow: 0 0 60px #ffbb33;
+    transform: scale(1.05);
+  }
+  .title {
+    font-size: 75px;
+    font-weight: 900;
+    text-align: center;
+    color: #f39c12;
+    margin-bottom: 40px;
+    letter-spacing: 14px;
+    user-select: none;
+  }
+  .pinned-profile {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .pinned-profile img {
+    width: 160px;
+    border-radius: 50%;
+    border: 3px solid #f39c12;
+    box-shadow: 0 0 22px #f39c12;
+  }
+  .pinned-profile-text {
+    margin-top: 14px;
+    font-size: 21px;
+    color: #f39c12;
+    font-weight: 700;
+  }
+  .channel-link {
+    text-align: center;
+    margin: 25px 0 45px 0;
+  }
+  .channel-link a {
+    font-weight: 900;
+    color: #f39c12;
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+  }
+  .channel-link a:hover {
+    color: #ffcc33;
+  }
+  .channel-description,
+  .channel-intro,
+  .why-us,
+  .contact-us,
+  .shop {
+    font-size: 19px;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 40px;
+    color: #ddd;
+  }
+  .features,
+  .shop {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 25px 30px;
+    border-radius: 12px;
+    line-height: 1.65;
+    margin-bottom: 40px;
+  }
+  h2 {
+    color: #f39c12;
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 26px;
+  }
+  ul {
+    list-style: inside disc;
+    padding-right: 15px;
+    color: #eee;
+    font-size: 18px;
+  }
+  .button-join {
+    display: block;
+    width: 240px;
+    margin: 0 auto 55px auto;
+    padding: 14px 0;
+    font-size: 22px;
+    font-weight: 900;
+    color: #222;
+    background: #f39c12;
+    border-radius: 35px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 22px #f39c12;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  .button-join:hover {
+    background: #ffcc33;
+    box-shadow: 0 0 35px #ffcc33;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #999;
+    border-top: 1px solid #444;
+    padding-top: 18px;
+    user-select: none;
+  }
+  /* فروشگاه */
+  .shop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .shop-item {
+    background: rgba(243, 156, 18, 0.15);
+    padding: 18px 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shop-item-name {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+  }
+  .shop-item-price {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 20px;
+  }
+  .shop-item-buy {
+    background: #f39c12;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 0 0 15px #f39c12;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  .shop-item-buy:hover {
+    background: #ffcc33;
+    box-shadow: 0 0 25px #ffcc33;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">VI RP</div>
+
+    <div class="pinned-profile">
+      <img src="https://s6.uupload.ir/files/img_20250606_040050_523_p3c2.jpg" alt="پروفایل سنجاق شده" />
+      <div class="pinned-profile-text">پروفایل سنجاق شده داخل کانال</div>
+    </div>
+
+    <div class="channel-link">
+      <a href="https://rubika.ir/MOHAFEZ_VI" target="_blank">@MOHAFEZ_VI</a>
+    </div>
+
+    <div class="channel-description">
+      کانال روبیکا <strong>@MOHAFEZ_VI</strong> با تلاش و پشتکار بی‌وقفه، یکی از بهترین منابع برای طرفداران بازی Los Angeles Crimes است.
+      در این کانال شما می‌توانید آموزش‌ها، نکات کلیدی، و اخبار جدید بازی را به‌صورت اختصاصی دریافت کنید.
+      با عضویت در این کانال، همواره به‌روز باشید و به جمع علاقه‌مندان حرفه‌ای بازی بپیوندید.
+      همچنین تعامل نزدیک با اعضا و پشتیبانی سریع از ویژگی‌های برجسته این کانال است.
+    </div>
+
+    <div class="features">
+      <h2>ویژگی‌های برجسته بازی:</h2>
+      <ul>
+        <li>شبیه‌سازی واقع‌گرایانه‌ی خیابان‌های لس آنجلس</li>
+        <li>گرافیک جذاب و طراحی دقیق محیط بازی</li>
+        <li>امکانات گسترده برای نقش‌آفرینی و تعامل با بازیکنان</li>
+        <li>گیم‌پلی هیجان‌انگیز و چالش‌برانگیز</li>
+        <li>پشتیبانی از بروزرسانی‌های مکرر و محتوای جدید</li>
+      </ul>
+    </div>
+
+    <div class="channel-intro">
+      <h2>معرفی کانال وی آی</h2>
+      <ul>
+        <li>سرور ۲۴ ساعته فعال</li>
+        <li>سرور بهینه و بدون لگ</li>
+        <li>حس واقعی‌تر و جذاب‌تر از بازی به شما منتقل می‌شود</li>
+        <li>شغل‌های متنوع مانند آتش‌نشانی، فروشنده و ...</li>
+        <li>داشتن مکان‌هایی مثل گیم‌نت، پای دی و بازار خلافکارها و ...</li>
+        <li>امکان خرید و فروش بیت‌کوین داخل سرور</li>
+      </ul>
+    </div>
+
+    <div class="why-us">
+      <h2>چرا ما را انتخاب کنید؟</h2>
+      <ul>
+        <li>پشتیبانی حرفه‌ای و پاسخگویی سریع به سوالات</li>
+        <li>جامعه‌ای فعال و دوستانه از بازیکنان</li>
+        <li>رویدادها و مسابقات هیجان‌انگیز با جوایز ویژه</li>
+        <li>آپدیت‌های منظم و اضافه شدن امکانات جدید</li>
+        <li>تجربه بازی با کیفیت بالا و بدون مشکلات فنی</li>
+      </ul>
+    </div>
+
+    <!-- بخش فروشگاه -->
+    <div class="shop">
+      <h2>فروشگاه VI RP</h2>
+      <div class="shop-list">
+        <div class="shop-item">
+          <div>
+            <div class="shop-item-name">پک شروع بازی</div>
+            <div class="shop-item-price">50,000 تومان</div>
+          </div>
+          <button class="shop-item-buy" onclick="alert('پک شروع بازی به سبد خرید اضافه شد!')">خرید</button>
+        </div>
+        <div class="shop-item">
+          <div>
+            <div class="shop-item-name">پوسته ویژه ماشین</div>
+            <div class="shop-item-price">75,000 تومان</div>
+          </div>
+          <button class="shop-item-buy" onclick="alert('پوسته ویژه ماشین به سبد خرید اضافه شد!')">خرید</button>
+        </div>
+        <div class="shop-item">
+          <div>
+            <div class="shop-item-name">افزایش سرعت بازی</div>
+            <div class="shop-item-price">30,000 تومان</div>
+          </div>
+          <button class="shop-item-buy" onclick="alert('افزایش سرعت بازی به سبد خرید اضافه شد!')">خرید</button>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://rubika.ir/MOHAFEZ_VI" target="_blank" class="button-join">عضویت در کانال</a>
+
+    <div class="contact-us">
+      <h2>تماس با ما</h2>
+      <p>برای دریافت اطلاعات بیشتر یا همکاری، با ما در تماس باشید:</p>
+    </div>
+
+    <div class="footer">
+      © ۲۰۲۵ کانال روبیکا VI RP | همه حقوق محفوظ است.
+    </div>
+  </div>
+</body>
+</html>
