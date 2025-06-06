@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VI RP - منوی اصلی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+      background: url(https://uploadkon.ir/uploads/058206_25rockstar-wallpaper.jpeg) no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 80px 20px 120px;
+    }
+    h1.title {
+      font-size: 64px;
+      font-weight: 900;
+      margin-bottom: 60px;
+      color: #f39c12;
+      text-shadow: 0 0 10px #000;
+      animation: fadeInDown 1.2s ease;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+      animation: fadeInUp 1.5s ease;
+    }
+    .menu button {
+      font-size: 24px;
+      padding: 16px 30px;
+      border: none;
+      border-radius: 35px;
+      background-color: #f39c12;
+      color: #111;
+      font-weight: 800;
+      cursor: pointer;
+      width: 300px;
+      box-shadow: 0 0 25px #f39c12;
+      transition: all 0.3s ease;
+    }
+    .menu button:hover {
+      background-color: #ffcc33;
+      box-shadow: 0 0 40px #ffcc33;
+    }
+    .content {
+      display: none;
+      max-width: 800px;
+      margin: 60px auto 0;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(243, 156, 18, 0.5);
+      animation: fadeIn 1s ease;
+    }
+    .content.active {
+      display: block;
+    }
+    h2 {
+      color: #f39c12;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    p, li {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #eee;
+      text-align: justify;
+    }
+    ul {
+      padding-right: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #f39c12;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.35);
+      color: white;
+      font-size: 14px;
+      padding: 12px 0;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      font-family: 'Vazirmatn', sans-serif;
+      z-index: 2;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1 class="title">VI RP</h1>
+    <div class="menu">
+      <button onclick="showContent('about')">معرفی بازی و کانال</button>
+      <button onclick="showContent('panel')">پنل کاربری</button>
+      <button onclick="showContent('tutorial')">آموزش ورود</button>
+      <button onclick="showContent('shop')">فروشگاه</button>
+    </div>
+
+    <div id="about" class="content">
+      <h2>معرفی بازی و کانال</h2>
+      <p>کانال روبیکا <strong>@MOHAFEZ_VI</strong> با تلاش و پشتکار بی‌وقفه، یکی از بهترین منابع برای طرفداران بازی Los Angeles Crimes است.
+        در این کانال شما می‌توانید آموزش‌ها، نکات کلیدی، و اخبار جدید بازی را به‌صورت اختصاصی دریافت کنید. با عضویت در این کانال، همواره به‌روز باشید و به جمع علاقه‌مندان حرفه‌ای بازی بپیوندید.
+        همچنین تعامل نزدیک با اعضا و پشتیبانی سریع از ویژگی‌های برجسته این کانال است.</p>
+      <ul>
+        <li>شبیه‌سازی واقع‌گرایانه‌ی خیابان‌های لس آنجلس</li>
+        <li>گرافیک جذاب و طراحی دقیق محیط بازی</li>
+        <li>امکانات گسترده برای نقش‌آفرینی و تعامل با بازیکنان</li>
+        <li>گیم‌پلی هیجان‌انگیز و چالش‌برانگیز</li>
+        <li>پشتیبانی از بروزرسانی‌های مکرر و محتوای جدید</li>
+      </ul>
+    </div>
+
+    <div id="panel" class="content">
+      <h2>پنل کاربری</h2>
+      <p>برای پیگیری مشکلات یا ارتباط مستقیم با پشتیبانی، روی لینک زیر کلیک کرده و مشخصات خود را وارد کنید:</p>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf-p-ch79vsHz1utrPE_offBuQagE0AF2yqyLV2BR_sSoeB_A/viewform" target="_blank" style="color:#f39c12; font-weight: bold;">فرم ورود به پنل</a></p>
+    </div>
+
+    <div id="tutorial" class="content">
+      <h2>آموزش ورود به سرور</h2>
+      <iframe src="https://uploadkon.ir/uploads/416806_25XRecorder-20250606-02.mp4" allowfullscreen></iframe>
+      <ul style="margin-top: 25px;">
+        <li><strong>نام سرور:</strong> رمز وی آی</li>
+        <li><strong>رمز سرور:</strong> وی آی</li>
+      </ul>
+    </div>
+
+    <div id="shop" class="content">
+      <h2>فروشگاه</h2>
+      <ul>
+        <li>خرید ۴۰۰۰ هزار پول : ۳۴ تومان</li>
+        <li>خرید ۱۱۶۰۰ سکه: ۵۰ تومان</li>
+        <li>خرید ۶۰۰ الماس: <em>ناموجود</em></li>
+        <li>خرید خانه‌ی شخصی: <em>ناموجود</em></li>
+        <li>خرید ماشین کینگ: ۴۵ تومان</li>
+        <li>خرید ماشین سوپرا: ۳۴ تومان</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    تمامی حقوق این سایت متعلق به مالک <strong>چنل روبیکا VI RP</strong> می‌باشد. هرگونه کپی‌برداری ممنوع است.
+  </footer>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
